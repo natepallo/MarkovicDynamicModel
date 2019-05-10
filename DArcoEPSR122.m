@@ -79,7 +79,7 @@ xlabel('Time [s]');
 figure(11);
 %plot(t4_1,-y4_1(:,3).*y4_1(:,12)+y4_1(:,4).*y4_1(:,11));
 plot(t4_1_ext,y4_1_ext(:,19),t4_1,y4_1(:,19));
-axis([0 10 .015 .1]);
+axis([0 10 .015 .03]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('Reactive power (with stepped p ref)');
 ylabel('q_{m} [pu]')
