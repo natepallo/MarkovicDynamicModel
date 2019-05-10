@@ -45,7 +45,7 @@ inverter_params.tvar_fun = @wg_ramp;
 %Figure 8: Plot power during step response. p = vod*iod+voq*ioq
 figure(8);
 plot(t4_1_ext,y4_1_ext(:,3).*y4_1_ext(:,11)+y4_1_ext(:,4).*y4_1_ext(:,12),t4_1_ext,y4_1(:,3).*y4_1(:,11)+y4_1(:,4).*y4_1(:,12));
-axis([0 10 0.4 0.8]);
+axis([0 4 0.4 0.8]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('Power [pu] (with stepped p ref)');
 ylabel('p [pu]');
@@ -54,7 +54,7 @@ xlabel('Time [s]');
 %Figure 9: Plot w_vsm during step response.
 figure(9);
 plot(t4_1_ext,1+y4_1_ext(:,1),t4_1,1+y4_1(:,1));
-axis([0 10 .999 1.001]);
+axis([0 4 .999 1.001]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('VSM speed (with stepped p ref)');
 ylabel('\omega_{VSM} [rad]')
@@ -64,13 +64,13 @@ xlabel('Time [s]');
 figure(10);
 subplot(2,1,1);
 plot(t4_1_ext,y4_1_ext(:,2),t4_1,y4_1(:,2));
-axis([0 10 .1 0.6]);
+axis([0 4 .1 0.6]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('Phase angle orientation of VSM and PLL (with stepped p ref)');
 ylabel('\delta\theta_{VSM} [rad]');
 subplot(2,1,2);
 plot(t4_1_ext,y4_1_ext(:,18),t4_1,y4_1(:,18));
-axis([0 10 .05 0.2]);
+axis([0 4 .05 0.2]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 ylabel('\delta\theta_{PLL} [rad]');
 xlabel('Time [s]');
@@ -79,7 +79,7 @@ xlabel('Time [s]');
 figure(11);
 %plot(t4_1,-y4_1(:,3).*y4_1(:,12)+y4_1(:,4).*y4_1(:,11));
 plot(t4_1_ext,y4_1_ext(:,19),t4_1,y4_1(:,19));
-axis([0 10 .015 .03]);
+axis([0 4 .015 .03]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('Reactive power (with stepped p ref)');
 ylabel('q_{m} [pu]')
@@ -88,7 +88,7 @@ xlabel('Time [s]');
 %Figure 12: Plot power during freq ramp. p = vod*iod+voq*ioq
 figure(12);
 plot(t4_2_ext,y4_2_ext(:,3).*y4_2_ext(:,11)+y4_2_ext(:,4).*y4_2_ext(:,12),t4_2,y4_2(:,3).*y4_2(:,11)+y4_2(:,4).*y4_2(:,12));
-axis([0 10 0.4 0.7]);
+axis([0 4 0.4 0.7]);
 legend({'Y-bus','\infty-bus'},'Location','east')
 title('Power [pu] (with freq ramp down)');
 ylabel('p [pu]');
@@ -97,7 +97,7 @@ xlabel('Time [s]');
 %Figure 13: Plot converter current during freq ramp
 figure(13);
 plot(t4_2_ext,y4_2_ext(:,5),t4_2_ext,y4_2_ext(:,6),t4_2,y4_2(:,5),t4_2,y4_2(:,6));
-axis([0 10 -0.1 0.8]);
+axis([0 4 -0.1 0.8]);
 legend({'i_{cv,d} Y-bus','i_{cv,q} Y-bus','i_{cv,d} \infty-bus','i_{cv,q} \infty-bus'},'Location','east')
 title('Converter current (with freq ramp down)');
 ylabel('i_{cv} [pu]');
